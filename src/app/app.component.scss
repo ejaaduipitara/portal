@@ -76,7 +76,6 @@ h1 {
     letter-spacing: 0;
 }
 .head{
-    padding: 1rem;
     font-weight: bolder;
     font-size: 24px !important;
     background-color: #017e7e!important;
@@ -87,10 +86,17 @@ h1 {
     width: 42%;
     box-shadow: 0 5px 10px #eee, 0 3px 3px #999;
 }
+
+.logocircle{
+    border-radius: 100%;
+    background: white;
+    width: 50px;
+    height: 50px;
+}
+
 @media (max-width: 767.98px) {
     .box{
-      margin-top: 20px;
+        margin-top: 20px;
         text-align: center;
     }
-    
 }  
