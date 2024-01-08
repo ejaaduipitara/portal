@@ -92,7 +92,7 @@ export class AppComponent implements OnInit {
   }
 
   getDashboardIcon(index: number): string {
-    const dashboardIcons = ['bi bi-laptop', 'bi bi-file-earmark-play-fill', 'bi bi-chat-left-quote', 'bi bi-chat-right-dots-fill', 'bi bi-chat-right-text','bi bi-telephone-fill'];
+    const dashboardIcons = ['bi bi-laptop', 'bi bi-file-earmark-play-fill','bi bi-telephone-fill', 'bi bi-chat-left-quote', 'bi bi-chat-right-dots-fill', 'bi bi-chat-right-text'];
     return dashboardIcons[index % dashboardIcons.length];
   }
 }
