@@ -1,6 +1,6 @@
 <div class="head">
-  <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">My Jaadui Pitara Dashboard</span>
+  <nav class="navbar navbar-light">
+    <span class="navbar-brand mb-0 h1 text-white">My Jaadui Pitara Dashboard</span>
   </nav>
 </div>
 
@@ -8,8 +8,10 @@
   <div *ngFor="let metric of apiData ;let i = index" class="metric-container"
     [style.background-color]="getDashboardColor(i)">
     <div class="row">
-      <div class="col-xs-12 col-md-4 col-lg-4 col-xl-4 p-0">
+      <div class="d-flex justify-content-center col-xs-12 col-md-4 col-lg-4 col-xl-4 p-0">
+        <div class="circle bg-white p-2 text-center">
         <i [class]="getDashboardIcon(i)" style="font-size: 2rem;"></i>
+        </div>
       </div>
       <div class="col-xs-12 col-md-8 col-lg-8 col-xl-8 p-0  text-md-left text-lg-left text-xl-left  ">
         <div class="box">
