@@ -67,33 +67,28 @@ export class AppComponent implements OnInit {
     };
 
     embedDashboard({
-      id: environment.dashboardIds[0], 
-      mountPoint: this.supersetContainer1.nativeElement, 
+      id: environment.dashboardIds[0],
+      mountPoint: this.supersetContainer1.nativeElement,
       ...commonConfig
     });
 
     embedDashboard({
-      id: environment.dashboardIds[1], 
-      mountPoint: this.supersetContainer2.nativeElement, 
+      id: environment.dashboardIds[1],
+      mountPoint: this.supersetContainer2.nativeElement,
       ...commonConfig
     });
 
     embedDashboard({
-      id: environment.dashboardIds[2], 
-      mountPoint: this.supersetContainer3.nativeElement, 
+      id: environment.dashboardIds[2],
+      mountPoint: this.supersetContainer3.nativeElement,
       ...commonConfig
 
     });
   }
 
   getDashboardColor(index: number): string {
-    const dashboardColors = ['#e2f5f5', '#e1effb', '#f3e1f3', '#ffe8d1', '#dcfdf5','#ceedd2'];
+    const dashboardColors = ['#e2f5f5', '#e1effb', '#f3e1f3', '#ffe8d1', '#dcfdf5', '#ceedd2'];
     return dashboardColors[index % dashboardColors.length];
-  }
-
-  getDashboardIcon(index: number): string {
-    const dashboardIcons = ['bi bi-laptop', 'bi bi-file-earmark-play-fill','bi bi-telephone-fill', 'bi bi-chat-left-quote', 'bi bi-chat-right-dots-fill', 'bi bi-chat-right-text'];
-    return dashboardIcons[index % dashboardIcons.length];
   }
 }
 
