@@ -36,7 +36,16 @@ export class AppComponent implements OnInit {
   fetchDataAndDisplay(): void {
     this.apiService.fetchData().subscribe(
       (data: any) => {
-        this.apiData = Object.entries(data.result).map(([metricName, value]) => ({
+
+        const formattedData = {
+          total_devices: data.result.total_devices,
+          total_plays: data.result.total_plays,
+          total_ivrs_calls: data.result.total_ivrs_calls,
+          total_messages_from_story_bot: data.result.total_messages_from_story_bot,
+          total_messages_from_teacher_bot: data.result.total_messages_from_teacher_bot,
+          total_messages_from_parent_bot: data.result.total_messages_from_parent_bot,
+        };
+        this.apiData = Object.entries(formattedData).map(([metricName, value]) => ({
           formattedMetricName: this.formatMetricName(metricName),
           value,
         }));
