@@ -41,10 +41,11 @@ export class AppComponent implements OnInit {
           total_devices: data.result.total_devices,
           total_plays: data.result.total_plays,
           total_ivrs_calls: data.result.total_ivrs_calls,
-          total_messages_from_story_bot: data.result.total_messages_from_story_bot,
-          total_messages_from_teacher_bot: data.result.total_messages_from_teacher_bot,
-          total_messages_from_parent_bot: data.result.total_messages_from_parent_bot,
         };
+        formattedData[' story_bot_-_total_messages']=data.result.total_messages_from_story_bot,
+        formattedData[' teacher_bot_-_total_messages']=data.result.total_messages_from_teacher_bot,
+        formattedData[' parent_bot_-_total_messages']=data.result.total_messages_from_parent_bot,
+
         this.apiData = Object.entries(formattedData).map(([metricName, value]) => ({
           formattedMetricName: this.formatMetricName(metricName),
           value,
