@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 20px;
+    // padding: 20px;
 
 }
 
@@ -60,7 +60,7 @@ h1 {
 
 ::ng-deep iframe {
     width: 100%;
-    height: 27rem;
+    height: 28rem;
 }
 .box{
     position: relative;
@@ -78,5 +78,19 @@ h1 {
 .head{
     padding: 1rem;
     font-weight: bolder;
-    font-family: monospace;
+    font-size: 24px !important;
+    background-color: #017e7e!important;
+    color: white;
 }
+.circle{
+    border-radius: 100%;
+    width: 42%;
+    box-shadow: 0 5px 10px #eee, 0 3px 3px #999;
+}
+@media (max-width: 767.98px) {
+    .box{
+      margin-top: 20px;
+        text-align: center;
+    }
+    
+}  
