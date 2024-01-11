@@ -17,6 +17,12 @@ export class AppComponent implements OnInit {
   supersetContainer2!: ElementRef;
   @ViewChild('supersetContainer3', { static: true })
   supersetContainer3!: ElementRef;
+  @ViewChild('supersetContainer4', { static: true })
+  supersetContainer4!: ElementRef;
+  @ViewChild('supersetContainer5', { static: true })
+  supersetContainer5!: ElementRef;
+  @ViewChild('supersetContainer6', { static: true })
+  supersetContainer6!: ElementRef;
 
   apiData: any = [];
 
@@ -66,7 +72,6 @@ export class AppComponent implements OnInit {
       },
       width: '100%',
     };
-
     embedDashboard({
       id: environment.dashboardIds[0],
       mountPoint: this.supersetContainer1.nativeElement,
@@ -82,6 +87,27 @@ export class AppComponent implements OnInit {
     embedDashboard({
       id: environment.dashboardIds[2],
       mountPoint: this.supersetContainer3.nativeElement,
+      ...commonConfig
+
+    });
+
+    embedDashboard({
+      id: environment.dashboardIds[3],
+      mountPoint: this.supersetContainer4.nativeElement,
+      ...commonConfig
+
+    });
+
+    embedDashboard({
+      id: environment.dashboardIds[4],
+      mountPoint: this.supersetContainer5.nativeElement,
+      ...commonConfig
+
+    });
+
+    embedDashboard({
+      id: environment.dashboardIds[5],
+      mountPoint: this.supersetContainer6.nativeElement,
       ...commonConfig
 
     });
