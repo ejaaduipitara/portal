@@ -25,10 +25,11 @@ export class AppComponent implements OnInit {
   supersetContainer6!: ElementRef;
 
   apiData: any = [];
-
+  title=''
   constructor(private http: HttpClient, private renderer: Renderer2, private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.title=environment.title;
     this.fetchDataAndDisplay();
     this.apiService.getDashboardToken().subscribe((data: any) => {
       this.embed(data.result.token)

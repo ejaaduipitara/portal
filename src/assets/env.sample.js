@@ -2,6 +2,7 @@
     window['env'] = window['env'] || {};
   
     // Environment variables
+    window['env']['title'] = '${TITLE}';
     window['env']['host'] = '${HOST}';
     window['env']['authToken'] = '${AUTH_TOKEN}';
     window['env']['superSetDomain'] = '${SUPERSET_DOMAIN}';
