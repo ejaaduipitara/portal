@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { embedDashboard } from "@superset-ui/embedded-sdk";
 import { ApiService } from './api.service';
 import { environment } from '../environments/environment';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -25,8 +25,11 @@ export class AppComponent implements OnInit {
   supersetContainer6!: ElementRef;
 
   apiData: any = [];
-  title=''
-  constructor(private http: HttpClient, private renderer: Renderer2, private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+    public title: Title) {
+      this.title.setTitle(environment.title)
+     }
 
   ngOnInit(): void {
     this.title=environment.title;
