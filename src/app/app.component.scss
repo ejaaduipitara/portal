@@ -81,7 +81,7 @@ h1 {
 .head{
     font-weight: bolder;
     font-size: 24px !important;
-    background-color: #F2696F!important;
+    background-color: #CF4147!important;
     color: white;
 }
 .circle{
@@ -97,9 +97,35 @@ h1 {
     height: 50px;
 }
 
+.head-bar{
+    background: #FFFFFF;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-1{
+margin-left: 4%;
+padding: 0.2rem;
+
+}
+.head-2{
+    margin-right: 4%;
+    padding: 0.2rem;
+
+}
+.navbar-brand{
+    margin-left: 4%;
+}
 @media (max-width: 767.98px) {
     .box{
         margin-top: 20px;
         text-align: center;
     }
 }  
+
+.cont{
+    margin-left: 2%;
+}
